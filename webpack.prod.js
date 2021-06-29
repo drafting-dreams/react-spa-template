@@ -24,6 +24,11 @@ module.exports = {
       //   },
       // },
       {
+        // svg loader, which makes us could import svg as a react component
+        test: /(\.svg)$/i,
+        loader: '@svgr/webpack',
+      },
+      {
         test: /\.[tj]sx?$/,
         exclude: /node_modules/,
         use: 'ts-loader',
@@ -36,7 +41,11 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              // modules: true, // enable css module
+              modules: {
+                // enable css, as well as ke-bab to camelCase transformation
+                exportLocalsConvention: 'camelCaseOnly',
+              },
               importLoaders: 2,
             },
           },
@@ -68,7 +77,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg)$/i,
+        test: /\.(png|jpg|ico)$/i,
         type: 'asset/resource',
       },
     ],
