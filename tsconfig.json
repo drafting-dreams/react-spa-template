@@ -11,7 +11,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "esModuleInterop": true // To fix some issues with code like jest tests that don't handled by webpack. See details at https://www.typescriptlang.org/tsconfig#esModuleInterop
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

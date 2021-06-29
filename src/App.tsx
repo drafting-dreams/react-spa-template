@@ -6,7 +6,7 @@ import P from '@/components/P'
 export default function App(): JSX.Element {
   return (
     <div>
-      <h1 className='main'>Hello, React2!</h1>
+      <h1 className="main">Hello, React2!</h1>
       <p className={classes.cl}>abc</p>
       <P />
       <p>333</p>

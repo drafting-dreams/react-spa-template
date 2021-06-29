@@ -3,3 +3,9 @@ node_modules
 dist
 
 .vscode
+
+# generated snapthos files
+__snapshots__
+
+# for macOS
+.DS_Store
